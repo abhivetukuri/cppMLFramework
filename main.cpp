@@ -1,6 +1,7 @@
 #include "Perceptron.h"
 #include "LinearRegression.h"
 #include "NaiveBayes.h"
+#include "knn.h"
 #include <iostream>
 #include <vector>
 
@@ -56,6 +57,36 @@ int main()
     std::vector<double> naiveBayesTestInput = {2.5, 20.0};
     int naiveBayesPrediction = naiveBayes.predict(naiveBayesTestInput);
     std::cout << "Naive Bayes prediction for input {2.5, 20.0}: " << naiveBayesPrediction << std::endl;
+
+    // Test for KNN
+    std::cout << "\nK-Nearest Neighbors Model Example:" << std::endl;
+
+    // Sample data for KNN
+    // Format: {feature1, feature2, label}
+    std::vector<std::vector<double>> knnTrainingData = {
+        {1.0, 2.0, 0},
+        {1.5, 1.5, 0},
+        {5.0, 2.0, 1},
+        {6.0, 2.0, 1},
+        // ... add more data as needed
+    };
+
+    // Separate labels from features
+    std::vector<std::vector<double>> knnData;
+    std::vector<int> knnLabels;
+    for (const auto &row : knnTrainingData)
+    {
+        knnData.push_back(std::vector<double>{row.begin(), row.end() - 1});
+        knnLabels.push_back(static_cast<int>(row.back()));
+    }
+
+    KNN knn(3);                    // Initialize KNN with k=3
+    knn.train(knnData, knnLabels); // Train the model
+
+    // Test the KNN model with a sample input
+    std::vector<double> knnTestInput = {2.0, 3.0};
+    int knnPrediction = knn.predict(knnTestInput);
+    std::cout << "KNN prediction for input {2.0, 3.0}: " << knnPrediction << std::endl;
 
     return 0;
 }

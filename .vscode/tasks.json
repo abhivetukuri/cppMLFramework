@@ -11,6 +11,7 @@
                 "${workspaceFolder}\\perceptron.cpp",
                 "${workspaceFolder}\\linearRegression.cpp",
                 "${workspaceFolder}\\NaiveBayes.cpp",
+                "${workspaceFolder}\\knn.cpp",
                 "-o",
                 "${workspaceFolder}\\myProgram.exe"
             ],
