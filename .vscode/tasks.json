@@ -10,6 +10,7 @@
                 "${workspaceFolder}\\main.cpp",
                 "${workspaceFolder}\\perceptron.cpp",
                 "${workspaceFolder}\\linearRegression.cpp",
+                "${workspaceFolder}\\NaiveBayes.cpp",
                 "-o",
                 "${workspaceFolder}\\myProgram.exe"
             ],

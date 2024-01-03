@@ -1,5 +1,6 @@
 #include "Perceptron.h"
 #include "LinearRegression.h"
+#include "NaiveBayes.h"
 #include <iostream>
 #include <vector>
 
@@ -34,6 +35,27 @@ int main()
     double linearRegTestInput = 3.0;
     double linearRegPrediction = linearReg.predict(linearRegTestInput);
     std::cout << "Linear Regression prediction for input 3.0: " << linearRegPrediction << std::endl;
+
+    // Example usage of Naive Bayes model
+    std::cout << "\nNaive Bayes Model Example:" << std::endl;
+
+    // Sample data for Naive Bayes
+    // Format: {feature1, feature2, ..., label}
+    std::vector<std::vector<double>> naiveBayesData = {
+        {1.0, 20.0, 0},
+        {2.0, 22.0, 0},
+        {3.0, 18.0, 1},
+        {2.0, 21.0, 1},
+        // ... add more data as needed
+    };
+
+    NaiveBayes naiveBayes;
+    naiveBayes.train(naiveBayesData); // Train the model
+
+    // Test the Naive Bayes model with a sample input
+    std::vector<double> naiveBayesTestInput = {2.5, 20.0};
+    int naiveBayesPrediction = naiveBayes.predict(naiveBayesTestInput);
+    std::cout << "Naive Bayes prediction for input {2.5, 20.0}: " << naiveBayesPrediction << std::endl;
 
     return 0;
 }
