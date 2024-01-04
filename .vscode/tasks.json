@@ -12,6 +12,7 @@
                 "${workspaceFolder}\\linearRegression.cpp",
                 "${workspaceFolder}\\NaiveBayes.cpp",
                 "${workspaceFolder}\\knn.cpp",
+                "${workspaceFolder}\\KMeans.cpp",
                 "-o",
                 "${workspaceFolder}\\myProgram.exe"
             ],

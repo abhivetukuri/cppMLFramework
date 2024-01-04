@@ -2,6 +2,7 @@
 #include "LinearRegression.h"
 #include "NaiveBayes.h"
 #include "knn.h"
+#include "KMeans.h"
 #include <iostream>
 #include <vector>
 
@@ -87,6 +88,33 @@ int main()
     std::vector<double> knnTestInput = {2.0, 3.0};
     int knnPrediction = knn.predict(knnTestInput);
     std::cout << "KNN prediction for input {2.0, 3.0}: " << knnPrediction << std::endl;
+
+    std::cout << "\nK-Means Clustering Example:" << std::endl;
+
+    // Sample data for KMeans
+    std::vector<std::vector<double>> kmeansData = {
+        {1.0, 2.0},
+        {1.5, 1.8},
+        {5.0, 8.0},
+        {8.0, 8.0},
+        {1.0, 0.6},
+        {9.0, 11.0},
+        // Add more data points as needed
+    };
+
+    int numClusters = 3;     // Number of clusters
+    int maxIterations = 100; // Maximum iterations for KMeans
+
+    KMeans kmeans(numClusters, maxIterations);
+    kmeans.train(kmeansData);
+
+    // Predict clusters for the data points
+    std::vector<int> clusters = kmeans.predict(kmeansData);
+
+    for (size_t i = 0; i < clusters.size(); ++i)
+    {
+        std::cout << "Data point " << i << " is in cluster " << clusters[i] << std::endl;
+    }
 
     return 0;
 }
