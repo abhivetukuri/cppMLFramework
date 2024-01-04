@@ -1,6 +1,6 @@
-# My Machine Learning Models Library
+# An Efficient C++ ML Library
 
-This repository contains a collection of machine learning models implemented in C++, including Perceptron, Linear Regression, Naive Bayes, K-Nearest Neighbors (KNN), and K-Means Clustering. These models can be used for a variety of basic machine learning tasks, this library offers fast and memory efficient implementations in cpp. 
+This repository contains a collection of machine learning models implemented in C++, including Perceptron, Linear Regression, Naive Bayes, K-Nearest Neighbors (KNN), and K-Means Clustering. These models can be used for a variety of basic machine learning tasks, this library offers fast and memory efficient implementations in cpp. I built this library to reinforce my machine learning foundation in the core algorithms while also learning to develop efficient code in c++.
 
 ## Features
 
