@@ -36,8 +36,8 @@ make
 
 The API for each model is intuitive and easy to use. Key methods include:
 
-train(...): Used to train the model on a given dataset.
-predict(...): Used to make predictions or, in the case of K-Means, to assign data points to clusters.
+- train(...): Used to train the model on a given dataset.
+- predict(...): Used to make predictions or, in the case of K-Means, to assign data points to clusters.
 
 ## Contributing
 
@@ -45,9 +45,9 @@ I welcome contributions to this library! If you have suggestions for improvement
 
 ### Contribution Guidelines
 
-**Fork the Repository**: Create your own fork of the code.
-**Create a Branch**: Make your changes in a new git branch.
-**Commit Your Changes**: Commit your changes with clear commit messages.
-**Push to the Branch**: Push your changes to your fork.
-**Submit a Pull Request**: In GitHub, submit a pull request to our repository.
+- **Fork the Repository**: Create your own fork of the code.
+- **Create a Branch**: Make your changes in a new git branch.
+- **Commit Your Changes**: Commit your changes with clear commit messages.
+- **Push to the Branch**: Push your changes to your fork.
+- **Submit a Pull Request**: In GitHub, submit a pull request to our repository.
 
